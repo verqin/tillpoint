@@ -304,7 +304,16 @@ function Landing() {
 
       <main className="mx-auto max-w-7xl px-5 pb-24 pt-8 sm:px-8 md:pt-12">
         {/* Hero */}
-        <section className="grid items-center gap-10 overflow-hidden rounded-[2rem] border border-blue-100 bg-gradient-to-br from-white via-blue-50/80 to-blue-100/80 px-6 py-10 shadow-[0_20px_60px_rgba(11,59,143,0.10)] sm:px-10 lg:grid-cols-[0.92fr_1.08fr] lg:px-12 lg:py-14">
+        <section
+          className="relative isolate grid items-center gap-10 overflow-hidden rounded-[2rem] border border-white/70 bg-[#eaf4ff] px-6 py-10 shadow-[0_20px_60px_rgba(11,59,143,0.16)] sm:px-10 lg:grid-cols-[0.92fr_1.08fr] lg:px-12 lg:py-14"
+          style={{
+            backgroundImage: `url(${heroGlassBackdrop})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+        >
+          <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-r from-white/95 via-white/45 to-transparent" aria-hidden="true" />
+          <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-tr from-[#0b3b8f]/10 via-transparent to-[#f15922]/15" aria-hidden="true" />
           {/* Hero content */}
           <div className="motion-safe:animate-in motion-safe:slide-in-from-left-4 duration-700">
             <span className="inline-flex items-center gap-2 rounded-full border border-[#f15922]/20 bg-orange-50 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-[#f15922]">
@@ -384,18 +393,8 @@ function Landing() {
 
           {/* Hero image */}
           <div className="flex min-h-[420px] flex-col items-center justify-center gap-6 motion-safe:animate-in motion-safe:slide-in-from-right-4 duration-700">
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-white/70 bg-[#dcecff] shadow-[0_0_0_1px_rgba(241,89,34,0.18),0_18px_38px_rgba(241,89,34,0.22),0_28px_70px_rgba(241,89,34,0.18)]">
-              <img
-                src={heroGlassBackdrop}
-                alt="Blue and orange skincare display with a glass product frame"
-                width={1536}
-                height={1024}
-                fetchPriority="high"
-                decoding="async"
-                className="absolute inset-0 block h-full w-full object-cover"
-              />
-              <div className="absolute inset-[10%_9%_13%_47%] rounded-[1.6rem] border border-white/80 bg-white/10 shadow-[inset_0_0_28px_rgba(255,255,255,0.65),0_0_20px_rgba(255,255,255,0.25)] backdrop-blur-[1.5px]" aria-hidden="true" />
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#0b3b8f]/10 via-transparent to-[#f15922]/10" aria-hidden="true" />
+            <div className="relative aspect-[4/3] w-full rounded-3xl border border-white/80 bg-white/10 shadow-[0_0_0_1px_rgba(241,89,34,0.2),0_18px_38px_rgba(241,89,34,0.24),0_28px_70px_rgba(11,59,143,0.18)] backdrop-blur-[1px]">
+              <div className="absolute inset-[7%_6%_10%_8%] rounded-[1.6rem] border border-white/70 bg-white/10 shadow-[inset_0_0_28px_rgba(255,255,255,0.6),0_0_24px_rgba(255,255,255,0.28)]" aria-hidden="true" />
             </div>
 
             {!signInOpen ? (
