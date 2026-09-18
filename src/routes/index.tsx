@@ -46,6 +46,8 @@ export const Route = createFileRoute("/")({
   component: Landing,
 });
 
+const heroGlassBackdrop =
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Sep%2018%2C%202026%2C%2012_49_52%20PM-OJeFwVyCP1inofCww9bO7nXWnHq8am.png";
 const creamHeroImage =
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-09-14%20at%208.41.50%20AM-JsEVEvZANZ37QXaQ1WUzw4ecfeI2hk.jpeg";
 
@@ -304,7 +306,16 @@ function Landing() {
 
       <main className="mx-auto max-w-7xl px-5 pb-24 pt-8 sm:px-8 md:pt-12">
         {/* Hero */}
-        <section className="grid items-center gap-10 overflow-hidden rounded-[2rem] border border-blue-100 bg-gradient-to-br from-white via-blue-50/80 to-blue-100/80 px-6 py-10 shadow-[0_20px_60px_rgba(11,59,143,0.10)] sm:px-10 lg:grid-cols-[0.92fr_1.08fr] lg:px-12 lg:py-14">
+        <section
+          className="relative isolate grid items-center gap-10 overflow-hidden rounded-[2rem] border border-white/70 bg-[#eaf4ff] px-6 py-10 shadow-[0_20px_60px_rgba(11,59,143,0.16)] sm:px-10 lg:grid-cols-[0.92fr_1.08fr] lg:px-12 lg:py-14"
+          style={{
+            backgroundImage: `url(${heroGlassBackdrop})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+        >
+          <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-r from-white/95 via-white/45 to-transparent" aria-hidden="true" />
+          <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-tr from-[#0b3b8f]/10 via-transparent to-[#f15922]/15" aria-hidden="true" />
           {/* Hero content */}
           <div className="motion-safe:animate-in motion-safe:slide-in-from-left-4 duration-700">
             <span className="inline-flex items-center gap-2 rounded-full border border-[#f15922]/20 bg-orange-50 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-[#f15922]">
@@ -384,19 +395,17 @@ function Landing() {
 
           {/* Hero image */}
           <div className="flex min-h-[420px] flex-col items-center justify-center gap-6 motion-safe:animate-in motion-safe:slide-in-from-right-4 duration-700">
-            <div className="relative w-full overflow-hidden rounded-3xl shadow-[0_0_0_1px_rgba(241,89,34,0.18),0_18px_38px_rgba(241,89,34,0.22),0_28px_70px_rgba(241,89,34,0.18)]">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-white/80 bg-white/10 shadow-[0_0_0_1px_rgba(241,89,34,0.2),0_18px_38px_rgba(241,89,34,0.24),0_28px_70px_rgba(11,59,143,0.18)] backdrop-blur-[1px]">
               <img
                 src={creamHeroImage}
-                alt="EXO moisture intensive creams and oils"
-                width={1200}
-                height={900}
-                fetchPriority="high"
+                alt="EXO skincare cream displayed in the glass hero frame"
+                className="absolute inset-0 size-full object-cover object-center"
+                loading="eager"
                 decoding="async"
-                onError={(event) => {
-                  event.currentTarget.src = "/packs.png";
-                }}
-                className="block h-full w-full object-cover"
               />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/35 via-transparent to-[#0b3b8f]/20" aria-hidden="true" />
+              <div className="pointer-events-none absolute inset-[7%_6%_10%_8%] rounded-[1.6rem] border border-white/80 bg-white/10 shadow-[inset_0_0_28px_rgba(255,255,255,0.65),0_0_24px_rgba(255,255,255,0.3)] backdrop-blur-[1px]" aria-hidden="true" />
+              <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-inset ring-white/60" aria-hidden="true" />
             </div>
 
             {!signInOpen ? (
