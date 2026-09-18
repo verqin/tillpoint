@@ -46,8 +46,8 @@ export const Route = createFileRoute("/")({
   component: Landing,
 });
 
-const heroGlassBackdrop =
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Sep%2018%2C%202026%2C%2012_49_52%20PM-OJeFwVyCP1inofCww9bO7nXWnHq8am.png";
+const creamHeroImage =
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-09-14%20at%208.41.50%20AM-JsEVEvZANZ37QXaQ1WUzw4ecfeI2hk.jpeg";
 
 const productImages = {
   oilColors:
@@ -307,7 +307,7 @@ function Landing() {
         <section
           className="relative isolate grid items-center gap-10 overflow-hidden rounded-[2rem] border border-white/70 bg-[#eaf4ff] px-6 py-10 shadow-[0_20px_60px_rgba(11,59,143,0.16)] sm:px-10 lg:grid-cols-[0.92fr_1.08fr] lg:px-12 lg:py-14"
           style={{
-            backgroundImage: `url(${heroGlassBackdrop})`,
+            backgroundImage: `url(${creamHeroImage})`,
             backgroundPosition: "center",
             backgroundSize: "cover",
           }}
