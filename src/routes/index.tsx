@@ -582,8 +582,15 @@ function Landing() {
         </section>
 
         {/* Product range */}
-        <section id="range" className="mt-24">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+        <section id="range" className="relative mt-24 overflow-hidden rounded-[2rem] px-4 py-8 sm:px-8">
+          <img
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Sep%2018%2C%202026%2C%2007_57_56%20PM-A7wND3dgaoeaT4n35ppQsa6I0kdtGy.png"
+            alt=""
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 size-full object-cover opacity-75"
+          />
+          <div className="pointer-events-none absolute inset-0 bg-white/55" aria-hidden="true" />
+          <div className="relative z-10 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#f15922]">
                 EXO skincare
@@ -602,7 +609,7 @@ function Landing() {
             <div className="hidden h-1 w-24 rounded-full bg-[#f15922] sm:block" />
           </div>
 
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="relative z-10 mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {products.map((p, index) => (
               <article
                 key={p.name}
@@ -648,7 +655,15 @@ function Landing() {
         </section>
 
         {/* Shades */}
-        <section id="shades" className="mt-24">
+        <section id="shades" className="relative mt-24 overflow-hidden rounded-[2rem] px-4 py-8 sm:px-8">
+          <img
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Sep%2018%2C%202026%2C%2007_57_56%20PM-A7wND3dgaoeaT4n35ppQsa6I0kdtGy.png"
+            alt=""
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 size-full object-cover opacity-70"
+          />
+          <div className="pointer-events-none absolute inset-0 bg-white/60" aria-hidden="true" />
+          <div className="relative z-10">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#f15922]">
             Product identification
           </span>
@@ -662,7 +677,7 @@ function Landing() {
             the bottle.
           </p>
 
-          <div className="mt-8 grid gap-6 lg:grid-cols-2">
+          <div className="relative z-10 mt-8 grid gap-6 lg:grid-cols-2">
             <figure className="overflow-hidden rounded-2xl border border-blue-100 bg-white p-4 shadow-[0_8px_25px_rgba(11,59,143,0.07)] transition duration-300 hover:border-orange-200 hover:shadow-[0_15px_35px_rgba(11,59,143,0.10)]">
               <div className="overflow-hidden rounded-xl bg-gradient-to-br from-blue-50 to-slate-50">
                 <img
@@ -702,6 +717,7 @@ function Landing() {
                 Cream colours
               </figcaption>
             </figure>
+          </div>
           </div>
         </section>
       </main>
