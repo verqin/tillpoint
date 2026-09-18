@@ -46,8 +46,8 @@ export const Route = createFileRoute("/")({
   component: Landing,
 });
 
-const creamHeroImage =
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-09-14%20at%208.41.50%20AM-JsEVEvZANZ37QXaQ1WUzw4ecfeI2hk.jpeg";
+const heroGlassBackdrop =
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Sep%2018%2C%202026%2C%2012_49_52%20PM-OJeFwVyCP1inofCww9bO7nXWnHq8am.png";
 
 const productImages = {
   oilColors:
@@ -384,19 +384,18 @@ function Landing() {
 
           {/* Hero image */}
           <div className="flex min-h-[420px] flex-col items-center justify-center gap-6 motion-safe:animate-in motion-safe:slide-in-from-right-4 duration-700">
-            <div className="relative w-full overflow-hidden rounded-3xl shadow-[0_0_0_1px_rgba(241,89,34,0.18),0_18px_38px_rgba(241,89,34,0.22),0_28px_70px_rgba(241,89,34,0.18)]">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-white/70 bg-[#dcecff] shadow-[0_0_0_1px_rgba(241,89,34,0.18),0_18px_38px_rgba(241,89,34,0.22),0_28px_70px_rgba(241,89,34,0.18)]">
               <img
-                src={creamHeroImage}
-                alt="EXO moisture intensive creams and oils"
-                width={1200}
-                height={900}
+                src={heroGlassBackdrop}
+                alt="Blue and orange skincare display with a glass product frame"
+                width={1536}
+                height={1024}
                 fetchPriority="high"
                 decoding="async"
-                onError={(event) => {
-                  event.currentTarget.src = "/packs.png";
-                }}
-                className="block h-full w-full object-cover"
+                className="absolute inset-0 block h-full w-full object-cover"
               />
+              <div className="absolute inset-[10%_9%_13%_47%] rounded-[1.6rem] border border-white/80 bg-white/10 shadow-[inset_0_0_28px_rgba(255,255,255,0.65),0_0_20px_rgba(255,255,255,0.25)] backdrop-blur-[1.5px]" aria-hidden="true" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#0b3b8f]/10 via-transparent to-[#f15922]/10" aria-hidden="true" />
             </div>
 
             {!signInOpen ? (
